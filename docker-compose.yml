@@ -9,4 +9,5 @@ bind:
   ports:
     - "53:53/tcp"
     - "53:53/udp"
-    
+  
+  container_name: bind
