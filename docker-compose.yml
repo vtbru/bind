@@ -1,13 +1,10 @@
 bind:
   image: vtbru/bind:latest
-
+  restart: unless-stopped
   volumes:
-    # You must provide a config file
     - ./named.conf:/etc/bind/named.conf
     - ./rndc.conf:/etc/bind/rndc.conf
-
   ports:
     - "53:53/tcp"
     - "53:53/udp"
-  
   container_name: bind
